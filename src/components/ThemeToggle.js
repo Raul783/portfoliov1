@@ -5,7 +5,6 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState('light');
   const [mounted, setMounted] = useState(false);
 
-  // 1. Este efecto SOLO corre una vez cuando el componente ya está en el navegador
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     

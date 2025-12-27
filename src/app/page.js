@@ -27,11 +27,11 @@ export default function Home() {
           <div className="project-categories">
             {categories.map((cat, index) => (
               <div key={index} className="category-card">
-                <a href={cat.link} className="projectlink">
+                <Link href={cat.link} className="projectlink">
                   <div className="category-icon">{cat.icon}</div>
                   <h3>{cat.title}</h3>
                   <p>{cat.desc}</p>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -59,33 +59,18 @@ export default function Home() {
           <div className="projects-grid">
             {projects.map((project, index) => (
 
-
               <div key={index} className="project-card">
-  {/* Usamos Link de Next.js para navegación interna suave */}
-  <Link href={project.link} className="projectlink">
-    <img src={project.image} className="project-image" alt={project.title} />
-    <div className="project-info">
-      <h3>{project.title}</h3>
-      <p className="text-secondary">{project.desc}</p>
-      {/* ... resto del código (techs, etc) */}
-    </div>
-  </Link>
-</div>
+                {/* Usamos Link de Next.js para navegación interna suave */}
+                <Link href={project.link} className="projectlink">
+                  <img src={project.image} className="project-image" alt={project.title} />
+                  <div className="project-info">
+                    <h3>{project.title}</h3>
+                    <p className="text-secondary">{project.desc}</p>
+                    {/* ... resto del código (techs, etc) */}
+                  </div>
+                </Link>
+              </div>
 
-              // <div key={index} className="project-card">
-              //   <a href={project.link} className="projectlink">
-              //     <img src={project.image} className="project-image" alt={project.title} />
-              //     <div className="project-info">
-              //       <h3>{project.title}</h3>
-              //       <p className="text-secondary">{project.desc}</p>
-              //       <div className="project-techs">
-              //         {project.techs.map((t, i) => (
-              //           <span key={i} className="project-tech">{t}</span>
-              //         ))}
-              //       </div>
-              //     </div>
-              //   </a>
-              // </div>
             ))}
           </div>
         </section>

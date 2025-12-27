@@ -7,10 +7,10 @@ export const personalInfo = {
 };
 
 export const categories = [
-  { icon: "🎮", title: "Juegos", desc: "Proyectos interactivos y mecánicas innovadoras", link: "#" },
-  { icon: "💼", title: "Sistemas Empresariales", desc: "Gestión y automatización para negocios", link: "#" },
-  { icon: "🤖", title: "ML & IA", desc: "Modelos predictivos y soluciones con ML", link: "#" },
-  { icon: "🌐", title: "Aplicaciones Web", desc: "Clones, E-commerce y plataformas modernas", link: "#" },
+  { icon: "🎮", title: "Juegos", desc: "Proyectos interactivos y mecánicas innovadoras", link: "/en-construccion" },
+  { icon: "💼", title: "Sistemas Empresariales", desc: "Gestión y automatización para negocios", link: "/en-construccion" },
+  { icon: "🤖", title: "ML & IA", desc: "Modelos predictivos y soluciones con ML", link: "/en-construccion" },
+  { icon: "🌐", title: "Aplicaciones Web", desc: "Clones, E-commerce y plataformas modernas", link: "/en-construccion" },
 ];
 
 export const technologies = [
@@ -29,21 +29,21 @@ export const projects = [
     desc: "Coming soon...",
     image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=500&auto=format&fit=crop",
     techs: ["Coming Soon..."],
-    link: "/movie"
+    link: "/en-construccion"
   },
   {
     title: "Coming soon",
     desc: "Coming soon...",
     image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=500&auto=format&fit=crop",
     techs: ["Coming Soon..."],
-    link: "#"
+    link: "/en-construccion"
   },
   {
     title: "Coming soon",
     desc: "Coming soon...",
     image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=500&auto=format&fit=crop",
     techs: ["Coming Soon..."],
-    link: "#"
+    link: "/en-construccion"
   },
   // Agrega más proyectos aquí...
 ];
