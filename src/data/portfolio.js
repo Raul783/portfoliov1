@@ -7,7 +7,7 @@ export const personalInfo = {
 };
 
 export const categories = [
-  { icon: "🎮", title: "Juegos", desc: "Proyectos interactivos y mecánicas innovadoras", link: "/en-construccion" },
+  { icon: "🎮", title: "Juegos", desc: "Proyectos interactivos y mecánicas innovadoras", link: "/categorias/juegos" },
   { icon: "💼", title: "Sistemas Empresariales", desc: "Gestión y automatización para negocios", link: "/en-construccion" },
   { icon: "🤖", title: "ML & IA", desc: "Modelos predictivos y soluciones con ML", link: "/en-construccion" },
   { icon: "🌐", title: "Aplicaciones Web", desc: "Clones, E-commerce y plataformas modernas", link: "/en-construccion" },
@@ -46,4 +46,35 @@ export const projects = [
     link: "/en-construccion"
   },
   // Agrega más proyectos aquí...
+];
+
+export const games = [
+  {
+    id: 1,
+    title: "Ajedrez Online",
+    image: "/chess.png",
+    link: "https://chess.com",
+    repo: "https://github.com",
+    isReady: true,
+    techs: ["fab fa-react", "fa-brands fa-node", "fas fa-database"]
+  },
+  {
+    id: 2,
+    title: "Buscaminas",
+    image: "/buscaminas.png",
+    link: "/en-construccion",
+    repo: "https://github.com",
+    isReady: false,
+    techs: ["fa-brands fa-react"]
+  },
+  {
+      id: 3,
+      title: "Sudoku",
+      image: "/sudoku.png",
+      link: "/en-construccion",
+      repo: "https://github.com",
+      isReady: false,
+      techs: ["fab fa-js", "fas fa-code"]
+  }
+  // ... agrega el resto siguiendo este patrón
 ];

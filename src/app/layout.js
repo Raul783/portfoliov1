@@ -1,5 +1,5 @@
 // src/app/layout.js
-import './globals.css'
+import '@/app/globals.css';
 
 export const metadata = {
   title: 'Raul Antonio Suarez Polanco - Portfolio',
