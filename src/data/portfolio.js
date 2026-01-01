@@ -51,7 +51,7 @@ export const games = [
   {
     id: 1,
     title: "Ajedrez Online",
-    image: "/chess.png",
+    image: "/chess.webp",
     link: "/en-construccion",
     repo: "https://github.com",
     isReady: false,
@@ -60,7 +60,7 @@ export const games = [
   {
     id: 2,
     title: "Buscaminas",
-    image: "/buscaminas.png",
+    image: "/buscaminas.webp",
     link: "/en-construccion",
     repo: "https://github.com",
     isReady: false,
@@ -69,7 +69,7 @@ export const games = [
   {
       id: 3,
       title: "Sudoku",
-      image: "/sudoku.png",
+      image: "/sudoku.webp",
       link: "/en-construccion",
       repo: "https://github.com",
       isReady: false,
@@ -78,7 +78,7 @@ export const games = [
   {
       id: 4,
       title: "Dominoes",
-      image: "/domino.png",
+      image: "/domino.webp",
       link: "/en-construccion",
       repo: "https://github.com",
       isReady: false,
@@ -87,7 +87,7 @@ export const games = [
   {
       id: 5,
       title: "Puzzle",
-      image: "/puzzle.png",
+      image: "/puzzle.webp",
       link: "/en-construccion",
       repo: "https://github.com",
       isReady: false,
@@ -96,7 +96,7 @@ export const games = [
   {
       id: 6,
       title: "Solitario",
-      image: "/solitario.png",
+      image: "/solitario.webp",
       link: "/en-construccion",
       repo: "https://github.com",
       isReady: false,

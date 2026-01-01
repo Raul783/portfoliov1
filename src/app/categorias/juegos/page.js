@@ -54,7 +54,7 @@ export default function GamesPage() {
               
               {/* Contenedor de Imagen */}
               <div style={styles.imageWrapper}>
-                <img src={game.image} alt={game.title} style={styles.image} />
+                <img src={game.image} alt={game.title} style={styles.image}  priority={false} />
               </div>
 
               {/* Contenido de la Card */}
