@@ -33,9 +33,20 @@ export default function GamesPage() {
       </div>
 
       <main className="container" style={styles.mainContainer}>
-        <div style={styles.header}>
+        {/* <div style={styles.header}>
             <h1 className="section-title">Laboratorio de Juegos</h1>
-        </div>
+        </div> */}
+
+
+        <section className='hero'>
+            <h1 className="name">Laboratorio de Juegos</h1>
+            <p className="bio">
+              Prototipos interactivos donde exploro lógica, estado y toma de decisiones
+              a través de pequeños juegos.
+            </p>
+
+          <div style={styles.heroDivider}></div>
+        </section>
 
         <div className="projects-grid">
           {games.map((game) => (
@@ -50,11 +61,9 @@ export default function GamesPage() {
               <div className="project-info" style={styles.cardContent}>
                 
                 {/* Iconos de Tecnología (Pequeños) */}
-                {/* <div style={styles.techBar}> */}
-                  {/* {game.techs.map((icon, idx) => ( */}
-                    {/* <i key={idx} className={icon} style={styles.techIcon} title="Tecnología"></i> */}
-                  {/* ))} */}
-                {/* </div> */}
+                <div style={styles.techBar}>
+
+                </div>
 
                 {/* <h3 style={styles.cardTitle}>{game.title}</h3> */}
                 
@@ -134,9 +143,8 @@ const styles = {
   },
   card: {
     display: 'flex',
-    maxWidth: '320px',
     flexDirection: 'column',
-    height: '400px', // Aumentado un poco para dar aire al contenido inferior
+    height: '320px', // Aumentado un poco para dar aire al contenido inferior
     borderRadius: '16px',
     overflow: 'hidden',
     transition: 'all 0.3s ease',
@@ -144,7 +152,7 @@ const styles = {
   },
   imageWrapper: {
     height: '400px', // Proporción ideal para cards
-    width: '320px',
+    // width: '320px',
     overflow: 'hidden',
     position: 'relative', // Por si quieres poner badges encima
     borderBottom: '1px solid rgba(255,255,255,0.05)',
@@ -173,9 +181,11 @@ const styles = {
     color: 'var(--text-secondary)',
   },
   cardTitle: {
-    fontSize: '1.2rem',
+    fontSize: '0.9rem',
     marginBottom: '18px',
     fontWeight: '600',
+    fontFamily: 'poppins',
+    color:'#e2e8f0'
   },
   buttonGroup: {
     display: 'flex',
@@ -211,5 +221,35 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     transition: 'all 0.2s ease',
-  }
-};
+  },
+  //   hero: {
+  //   maxWidth: '720px',
+  //   margin: '0 auto 60px auto',
+  //   textAlign: 'center',
+  //   paddingTop: '40px',
+  // },
+
+  // heroTitle: {
+  //   fontSize: 'clamp(2.4rem, 4vw, 3.2rem)',
+  //   fontWeight: '800',
+  //   letterSpacing: '-0.02em',
+  //   marginBottom: '14px',
+  //   color: 'var(--text-primary)',
+  // },
+
+  // heroSubtitle: {
+  //   fontSize: '1rem',
+  //   lineHeight: '1.6',
+  //   color: 'var(--text-secondary)',
+  //   opacity: 0.9,
+  // },
+
+  // heroDivider: {
+  //   width: '120px',
+  //   height: '2px',
+  //   margin: '30px auto 0',
+  //   background: 'linear-gradient(90deg, transparent, var(--text-secondary), transparent)',
+  //   opacity: 0.3,
+  // },
+
+}

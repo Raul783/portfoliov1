@@ -3,7 +3,7 @@
 export const personalInfo = {
   name: "Raul Antonio Suarez Polanco",
   bio: "Soy un desarrollador con una fuerte base en lógica, análisis de sistemas y construcción de soluciones desde cero, capaz de transformar ideas abstractas en implementaciones concretas, funcionales y escalables.",
-  image: "/raul.jpg" // Asegúrate de poner tu foto en la carpeta 'public'
+  image: "/raul.jpg"
 };
 
 export const categories = [
@@ -45,23 +45,22 @@ export const projects = [
     techs: ["Coming Soon..."],
     link: "/en-construccion"
   },
-  // Agrega más proyectos aquí...
 ];
 
 export const games = [
   {
     id: 1,
     title: "Ajedrez Online",
-    image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=500&q=80",
-    link: "https://chess.com",
+    image: "/chess.png",
+    link: "/en-construccion",
     repo: "https://github.com",
-    isReady: true,
+    isReady: false,
     techs: ["fab fa-react", "fa-brands fa-node", "fas fa-database"]
   },
   {
     id: 2,
     title: "Buscaminas",
-    image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=500&q=80",
+    image: "/buscaminas.png",
     link: "/en-construccion",
     repo: "https://github.com",
     isReady: false,
@@ -70,11 +69,37 @@ export const games = [
   {
       id: 3,
       title: "Sudoku",
-      image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=500&q=80",
+      image: "/sudoku.png",
+      link: "/en-construccion",
+      repo: "https://github.com",
+      isReady: false,
+      techs: ["fab fa-js", "fas fa-code"]
+  },
+  {
+      id: 4,
+      title: "Dominoes",
+      image: "/domino.png",
+      link: "/en-construccion",
+      repo: "https://github.com",
+      isReady: false,
+      techs: ["fab fa-js", "fas fa-code"]
+  },
+  {
+      id: 5,
+      title: "Puzzle",
+      image: "/puzzle.png",
+      link: "/en-construccion",
+      repo: "https://github.com",
+      isReady: false,
+      techs: ["fab fa-js", "fas fa-code"]
+  },
+  {
+      id: 6,
+      title: "Solitario",
+      image: "/solitario.png",
       link: "/en-construccion",
       repo: "https://github.com",
       isReady: false,
       techs: ["fab fa-js", "fas fa-code"]
   }
-  // ... agrega el resto siguiendo este patrón
 ];

@@ -13,7 +13,6 @@ export default function Home() {
       <div className="container">
         {/* HERO SECTION */}
         <section className="hero">
-          {/* Recuerda poner tu imagen 'raul.webp' en la carpeta /public */}
           <img src={personalInfo.image} alt={personalInfo.name} className="profile-img" />
           <div className="hero-content">
             <h1 className="name">{personalInfo.name}</h1>
@@ -60,13 +59,11 @@ export default function Home() {
             {projects.map((project, index) => (
 
               <div key={index} className="project-card">
-                {/* Usamos Link de Next.js para navegación interna suave */}
                 <Link href={project.link} className="projectlink">
                   <img src={project.image} className="project-image" alt={project.title} />
                   <div className="project-info">
                     <h3>{project.title}</h3>
                     <p className="text-secondary">{project.desc}</p>
-                    {/* ... resto del código (techs, etc) */}
                   </div>
                 </Link>
               </div>
