@@ -27,21 +27,21 @@ export const projects = [
   {
     title: "Coming soon",
     desc: "Coming soon...",
-    image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=500&auto=format&fit=crop",
+    image: "/sooner.webp",
     techs: ["Coming Soon..."],
     link: "/en-construccion"
   },
   {
     title: "Coming soon",
     desc: "Coming soon...",
-    image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=500&auto=format&fit=crop",
+    image: "/sooner.webp",
     techs: ["Coming Soon..."],
     link: "/en-construccion"
   },
   {
     title: "Coming soon",
     desc: "Coming soon...",
-    image: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=500&auto=format&fit=crop",
+    image: "/sooner.webp",
     techs: ["Coming Soon..."],
     link: "/en-construccion"
   },
@@ -110,9 +110,9 @@ export const enterprise = [
     title: "Coming soon",
     description: "Coming soon...",
     image: "/sooner.webp",
-    link: "https://tu-dashboard-demo.com",
-    repo: "https://github.com/tu-usuario/crm-repo",
-    isReady: true,
+    link: "https://github.com",
+    repo: "https://github.com",
+    isReady: false,
     techs: ["fab fa-react"],
     tags: ["Full Stack", "Analytics", "Auth"]
   },
@@ -134,7 +134,7 @@ export const enterprise = [
     image: "/sooner.webp",
     link: "https://github.com",
     repo: "https://github.com",
-    isReady: true,
+    isReady: false,
     techs: ["fas fa-server"],
     tags: ["API REST", "Stripe"]
   }
@@ -154,8 +154,8 @@ export const enterpriseProjects = [
       "fas fa-database",
       "fab fa-spotify",
     ],
-    link: "https://spotify-clone-demo.vercel.app",
-    repo: "https://github.com/tuusuario/spotify-clone",
+    link: "https://github.com",
+    repo: "https://github.com",
     isReady: true,
   },
 
@@ -172,8 +172,8 @@ export const enterpriseProjects = [
       "fas fa-server",
       "fas fa-play-circle",
     ],
-    link: "https://movieflix-clone-demo.vercel.app",
-    repo: "https://github.com/tuusuario/movieflix-clone",
+    link: "https://github.com",
+    repo: "https://github.com",
     isReady: true,
   },
 
@@ -190,8 +190,8 @@ export const enterpriseProjects = [
       "fas fa-database",
       "fas fa-columns",
     ],
-    link: "https://trello-clone-demo.vercel.app",
-    repo: "https://github.com/tuusuario/trello-clone",
+    link: "https://github.com",
+    repo: "https://github.com",
     isReady: false,
   }
 ];

@@ -42,7 +42,7 @@ export default function EnterprisePage() {
 
       <main style={styles.container}>
         <section style={styles.hero}>
-          <h1 style={styles.name}>Aplicaciones web</h1>
+          <h1 style={styles.name}>Aplicaciones web y clones</h1>
           <p style={styles.bio}>
             Clones de aplicaciones modernas enfocados en arquitectura, UX y UI.
           </p>

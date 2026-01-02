@@ -1,7 +1,11 @@
+"use client";
+
 import FloatingLogos from '../components/FloatingLogos';
 import ThemeToggle from '../components/ThemeToggle';
 import { personalInfo, categories, technologies, projects } from '../data/portfolio';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 
 export default function Home() {
@@ -13,7 +17,16 @@ export default function Home() {
       <div className="container">
         {/* HERO SECTION */}
         <section className="hero">
-          <img src={personalInfo.image} alt={personalInfo.name} className="profile-img" />
+          {/* <img src={personalInfo.image} alt={personalInfo.name} className="profile-img" /> */}
+
+          <Image
+            src={personalInfo.image}
+            alt={personalInfo.name}
+            width={180}
+            height={180}
+            className="profile-img"
+            priority
+          />
           <div className="hero-content">
             <h1 className="name">{personalInfo.name}</h1>
             <p className="bio">{personalInfo.bio}</p>
@@ -60,7 +73,10 @@ export default function Home() {
 
               <div key={index} className="project-card">
                 <Link href={project.link} className="projectlink">
-                  <img src={project.image} className="project-image" alt={project.title} />
+                  <Image 
+                    src={project.image} className='project-image' alt={project.title}   
+                    width={600}height={400}
+                  />
                   <div className="project-info">
                     <h3>{project.title}</h3>
                     <p className="text-secondary">{project.desc}</p>
