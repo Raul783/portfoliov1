@@ -28,6 +28,75 @@
             --gradient: linear-gradient(135deg, #60a5fa, #a78bfa);
         }
 
+        .theme-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            color: var(--text-primary);
+            cursor: pointer;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow: 0 8px 25px var(--shadow);
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+            }
+
+            /* Hover */
+            .theme-toggle:hover {
+            transform: scale(1.08) rotate(12deg);
+            border-color: var(--accent);
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.35);
+            }
+
+            /* Icono */
+            .theme-toggle i {
+            font-size: 1.3rem;
+            transition: transform 0.35s ease, color 0.35s ease;
+            }
+
+            /* Animación del icono */
+            .theme-toggle:hover i {
+            transform: rotate(-20deg) scale(1.15);
+            }
+
+            /* Colores según tema */
+            [data-theme="dark"] .theme-toggle i {
+            color: #fbbf24; /* sol */
+            }
+
+            [data-theme="light"] .theme-toggle i {
+            color: #334155; /* luna */
+            }
+
+            /* Focus accesible */
+            .theme-toggle:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+            }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+            .theme-toggle {
+                top: 1.2rem;
+                right: 1.2rem;
+                width: 44px;
+                height: 44px;
+            }
+            }
+
+
         * {
             margin: 0;
             padding: 0;
