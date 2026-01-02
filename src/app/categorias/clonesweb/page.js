@@ -4,7 +4,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 import FloatingLogos from '@/components/FloatingLogos';
 import Link from 'next/link';
 import Image from 'next/image';
-import { enterprise } from '@/data/portfolio';
+import { enterpriseProjects } from '@/data/portfolio';
 
 const FLOATING_ICONS = Array.from({ length: 8 }).map((_, i) => ({
   id: i,
@@ -42,30 +42,30 @@ export default function EnterprisePage() {
 
       <main style={styles.container}>
         <section style={styles.hero}>
-          <h1 style={styles.name}>Sistemas para negocios</h1>
+          <h1 style={styles.name}>Aplicaciones web</h1>
           <p style={styles.bio}>
-            Aqui hay proyectos construidos para negocios que quieran tener puntos de ventas, sistemas de prestamos etc, orientadas a la eficiencia operativa.
+            Clones de aplicaciones modernas enfocados en arquitectura, UX y UI.
           </p>
-            <div style={styles.heroDivider} />
+          <div style={styles.heroDivider} />
         </section>
 
         <section style={styles.projectsGrid}>
-          {enterprise.map(project => (
+          {enterpriseProjects.map(project => (
             <article key={project.id} style={styles.projectCard} className="project-card">
               <div style={styles.imageWrapper}>
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
 
               <div style={styles.projectInfo}>
-                <h3>{project.title}</h3>
+                <h3 style={styles.projectTitle}>{project.title}</h3>
 
-                <p style={styles.textSecondary}>
+                <p style={styles.projectDescription}>
                   {project.description}
                 </p>
 
@@ -105,6 +105,12 @@ export default function EnterprisePage() {
         @keyframes float {
           0%, 100% { transform: translate(0, 0); }
           50% { transform: translate(-20px, -40px); }
+        }
+
+        .project-card {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
         }
 
         .project-card:hover {
@@ -180,10 +186,19 @@ const styles = {
     margin: '0 auto',
   },
 
+  heroDivider: {
+    width: '80px',
+    height: '4px',
+    background: '#0ea5e9',
+    margin: '30px auto 0',
+    borderRadius: '2px',
+  },
+
   projectsGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
     gap: '2.5rem',
+    alignItems: 'stretch',
   },
 
   projectCard: {
@@ -192,55 +207,77 @@ const styles = {
     borderRadius: '20px',
     overflow: 'hidden',
     transition: 'all 0.35s ease',
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '480px',
   },
 
   imageWrapper: {
-    height: '200px',
+    height: '220px',
+    minHeight: '220px',
     position: 'relative',
     overflow: 'hidden',
+    flexShrink: 0,
   },
 
   projectInfo: {
     padding: '2rem',
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
   },
 
-  textSecondary: {
-    fontSize: '0.85rem',
+  projectTitle: {
+    fontSize: '1.25rem',
+    fontWeight: 600,
+    marginBottom: '1rem',
+    minHeight: '1.5em',
+  },
+
+  projectDescription: {
+    fontSize: '0.9rem',
     color: 'var(--text-secondary)',
     marginBottom: '1.5rem',
     lineHeight: 1.6,
+    flexGrow: 1,
+    minHeight: '3em',
   },
 
   techBar: {
     display: 'flex',
-    gap: '0.6rem',
+    gap: '0.7rem',
     flexWrap: 'wrap',
     marginBottom: '1.5rem',
+    minHeight: '2rem',
+    alignItems: 'center',
   },
 
   techIcon: {
-    fontSize: '1.2rem',
+    fontSize: '1.3rem',
     color: 'var(--accent)',
   },
 
   buttonGroup: {
     display: 'flex',
     gap: '1rem',
+    marginTop: 'auto',
   },
 
   liveBtn: {
     flex: 1,
-    padding: '0.7rem 1.5rem',
+    padding: '0.75rem 1.5rem',
     borderRadius: '50px',
     background: 'var(--gradient)',
     color: '#fff',
     textDecoration: 'none',
-    fontSize: '0.85rem',
+    fontSize: '0.9rem',
+    fontWeight: 500,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: '0.6rem',
     transition: 'all 0.3s ease',
+    height: '48px',
   },
 
   repoBtn: {
@@ -254,13 +291,7 @@ const styles = {
     color: 'var(--text-primary)',
     textDecoration: 'none',
     transition: 'all 0.3s ease',
+    fontSize: '1.1rem',
+    flexShrink: 0,
   },
-    heroDivider: {
-    width: "80px",
-    height: "4px",
-    background: "#0ea5e9",
-    margin: "30px auto 0",
-    borderRadius: "2px",
-  },
-
 };

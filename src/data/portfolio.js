@@ -10,7 +10,7 @@ export const categories = [
   { icon: "🎮", title: "Juegos", desc: "Proyectos interactivos y mecánicas innovadoras", link: "/categorias/juegos" },
   { icon: "💼", title: "Sistemas para negocios", desc: "Gestión y automatización para negocios", link: "/categorias/enterprise" },
   { icon: "🤖", title: "ML & IA", desc: "Modelos predictivos y soluciones con ML", link: "/en-construccion" },
-  { icon: "🌐", title: "Aplicaciones Web", desc: "Clones, E-commerce y plataformas modernas", link: "/en-construccion" },
+  { icon: "🌐", title: "Aplicaciones Web", desc: "Clones, E-commerce y plataformas modernas", link: "/categorias/clonesweb" },
 ];
 
 export const technologies = [
@@ -109,7 +109,7 @@ export const enterprise = [
     id: 1,
     title: "Coming soon",
     description: "Coming soon...",
-    image: "/loans.webp",
+    image: "/sooner.webp",
     link: "https://tu-dashboard-demo.com",
     repo: "https://github.com/tu-usuario/crm-repo",
     isReady: true,
@@ -120,7 +120,7 @@ export const enterprise = [
     id: 2,
     title: "Coming soon",
     description: "Coming soon...",
-    image: "/inventory.webp",
+    image: "/sooner.webp",
     link: "/en-construccion",
     repo: "https://github.com",
     isReady: false,
@@ -131,11 +131,67 @@ export const enterprise = [
     id: 3,
     title: "Coming soon",
     description: "Coming soon...",
-    image: "/pos.webp",
+    image: "/sooner.webp",
     link: "https://github.com",
     repo: "https://github.com",
     isReady: true,
     techs: ["fas fa-server"],
     tags: ["API REST", "Stripe"]
+  }
+];
+
+export const enterpriseProjects = [
+  {
+    id: "spotify-clone",
+    title: "Spotify Clone",
+    description:
+      "Clon de Spotify con reproducción de música, playlists personalizadas y búsqueda avanzada. Incluye autenticación de usuarios, gestión de favoritos y reproductor funcional con controles completos.",
+    image: "/sooner.webp",
+    techs: [
+      "fab fa-react",
+      "fab fa-node-js",
+      "fas fa-music",
+      "fas fa-database",
+      "fab fa-spotify",
+    ],
+    link: "https://spotify-clone-demo.vercel.app",
+    repo: "https://github.com/tuusuario/spotify-clone",
+    isReady: true,
+  },
+
+  {
+    id: "movieflix-clone",
+    title: "MovieFlix Clone",
+    description:
+      "Plataforma de streaming estilo Netflix con catálogo de películas y series. Integración con API de TMDb, sistema de búsqueda, categorías dinámicas y reproductor de trailers con interfaz responsive.",
+    image: "/sooner.webp",
+    techs: [
+      "fab fa-react",
+      "fab fa-js",
+      "fas fa-film",
+      "fas fa-server",
+      "fas fa-play-circle",
+    ],
+    link: "https://movieflix-clone-demo.vercel.app",
+    repo: "https://github.com/tuusuario/movieflix-clone",
+    isReady: true,
+  },
+
+  {
+    id: "trello-clone",
+    title: "Trello Clone",
+    description:
+      "Sistema de gestión de proyectos tipo Kanban con tableros personalizables. Funcionalidades de drag & drop, asignación de tareas, etiquetas, fechas límite y colaboración en tiempo real.",
+    image: "/sooner.webp",
+    techs: [
+      "fab fa-react",
+      "fab fa-node-js",
+      "fas fa-tasks",
+      "fas fa-database",
+      "fas fa-columns",
+    ],
+    link: "https://trello-clone-demo.vercel.app",
+    repo: "https://github.com/tuusuario/trello-clone",
+    isReady: false,
   }
 ];
