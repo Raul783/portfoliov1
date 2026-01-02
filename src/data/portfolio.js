@@ -8,7 +8,7 @@ export const personalInfo = {
 
 export const categories = [
   { icon: "🎮", title: "Juegos", desc: "Proyectos interactivos y mecánicas innovadoras", link: "/categorias/juegos" },
-  { icon: "💼", title: "Sistemas Empresariales", desc: "Gestión y automatización para negocios", link: "/en-construccion" },
+  { icon: "💼", title: "Sistemas para negocios", desc: "Gestión y automatización para negocios", link: "/categorias/enterprise" },
   { icon: "🤖", title: "ML & IA", desc: "Modelos predictivos y soluciones con ML", link: "/en-construccion" },
   { icon: "🌐", title: "Aplicaciones Web", desc: "Clones, E-commerce y plataformas modernas", link: "/en-construccion" },
 ];
@@ -101,5 +101,41 @@ export const games = [
       repo: "https://github.com",
       isReady: false,
       techs: ["fab fa-js", "fas fa-code"]
+  }
+];
+
+export const enterprise = [
+  {
+    id: 1,
+    title: "Coming soon",
+    description: "Coming soon...",
+    image: "/loans.webp",
+    link: "https://tu-dashboard-demo.com",
+    repo: "https://github.com/tu-usuario/crm-repo",
+    isReady: true,
+    techs: ["fab fa-react"],
+    tags: ["Full Stack", "Analytics", "Auth"]
+  },
+  {
+    id: 2,
+    title: "Coming soon",
+    description: "Coming soon...",
+    image: "/inventory.webp",
+    link: "/en-construccion",
+    repo: "https://github.com",
+    isReady: false,
+    techs: ["fab fa-node"],
+    tags: ["Backend Heavy", "Microservices"]
+  },
+  {
+    id: 3,
+    title: "Coming soon",
+    description: "Coming soon...",
+    image: "/pos.webp",
+    link: "https://github.com",
+    repo: "https://github.com",
+    isReady: true,
+    techs: ["fas fa-server"],
+    tags: ["API REST", "Stripe"]
   }
 ];

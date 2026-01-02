@@ -1,35 +1,42 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState('light');
+  console.log("🔥 THEME TOGGLE LOADED");
+
+  const [theme, setTheme] = useState("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    
+    try {
+      const storedTheme = localStorage.getItem("theme");
 
-    document.body.dataset.theme = savedTheme;
-    
-    setTheme(savedTheme);
-    
-    setMounted(true);
+      if (storedTheme === "light" || storedTheme === "dark") {
+        setTheme(storedTheme);
+        document.body.setAttribute("data-theme", storedTheme);
+      } else {
+        document.body.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+    } catch (e) {
+      console.error("Theme error:", e);
+    } finally {
+      setMounted(true);
+    }
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.body.dataset.theme = newTheme;
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.body.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
   };
 
-  if (!mounted) {
-    return <button className="theme-toggle" style={{ opacity: 0 }}>🌙</button>;
-  }
+  if (!mounted) return null;
 
   return (
-    <button className="theme-toggle" onClick={toggleTheme}>
-      {theme === 'dark' ? '☀️' : '🌙'}
+    <button onClick={toggleTheme} className="theme-toggle">
+      <i className={`fas ${theme === "dark" ? "fa-sun" : "fa-moon"}`} />
     </button>
   );
 }
